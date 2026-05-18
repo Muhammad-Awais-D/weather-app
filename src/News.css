@@ -1,0 +1,314 @@
+:root {
+    --primary-bg: #f4f7f9;
+    --dark-blue: #1a2a6c;
+    --accent-coral: #ff7e5f;
+    --text-main: #2d3436;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Branding / Logo Styles */
+.brand-header {
+    background: white;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: var(--dark-blue);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(26, 42, 108, 0.3);
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -1px;
+    color: var(--dark-blue);
+}
+
+.logo-text span {
+    color: var(--accent-coral);
+}
+
+.date-display {
+    color: #718096;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navbar Styling */
+.main-nav {
+    border-bottom: 3px solid #ff7f50; /* Match your Coral color */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 15px 20px !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff7f50 !important;
+}
+
+
+
+/* Fix for the Search Bar alignment and style */
+.search-bar {
+    max-width: 300px;
+    align-items: center;
+}
+
+/* Premium Search Bar Container */
+.search-bar {
+    max-width: 320px;
+    background: transparent;
+}
+
+.search-bar .input-group {
+    background: rgba(255, 255, 255, 0.05); /* Very subtle transparent white */
+    border-radius: 8px; /* Softer, modern corners */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover/Focus effect for the whole group */
+.search-bar .input-group:focus-within {
+    border-color: #ff7f50;
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Input Field Styling */
+.search-bar .form-control {
+    background: transparent !important; /* Clears that awkward grey box */
+    border: none !important;
+    color: #ffffff !important;
+    font-size: 0.95rem;
+    padding: 10px 15px;
+    box-shadow: none !important;
+}
+
+.search-bar .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+}
+
+/* Premium Button Styling */
+.search-bar .btn-premium {
+    background: #ff7f50;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.search-bar .btn-premium:hover {
+    background: #ff6333;
+    letter-spacing: 1.5px; /* Subtle expansion effect */
+}
+/* Ensure the sticky navbar doesn't overlap content weirdly */
+.sticky-top {
+    z-index: 1020;
+}
+
+/* Enhancing the Breaking Ticker */
+.breaking-ticker {
+    background: #1a202c; /* Slightly deeper black/blue */
+    padding: 10px 0;
+}
+
+/* Loader */
+.loader-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+/* Breaking Ticker */
+.breaking-ticker {
+    background: var(--dark-blue);
+    color: white;
+    padding: 12px 0;
+    font-size: 0.9rem;
+}
+
+.badge-breaking {
+    background: var(--accent-coral);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Hero Section */
+.hero-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 450px;
+    box-shadow: var(--card-shadow);
+}
+
+.hero-img {
+    width: 100%;
+    height: 100% !important; 
+    object-fit: cover;
+     object-position: top;
+
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+.category-tag {
+    background: var(--accent-coral);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* News Cards */
+.section-header {
+    margin-bottom: 30px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-coral);
+    margin-top: 8px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--card-shadow);
+    border: none;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body-custom {
+    padding: 20px;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+}
+
+/* Read More Button */
+.btn-read-more {
+    text-decoration: none;
+    color: var(--accent-coral);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.btn-read-more:hover {
+    color: var(--dark-blue);
+}
+
+.btn-read-more span {
+    transition: margin-left 0.3s ease;
+}
+
+.btn-read-more:hover span {
+    margin-left: 8px;
+}
+
+.text-coral {
+    color: var(--accent-coral);
+}
+
+.footer-modern {
+    padding: 40px 0;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 576px) {
+    /* Instead of hiding, we make the search bar compact */
+    .search-bar {
+        max-width: 150px; /* Small enough to fit next to the logo */
+        margin-left: auto; /* Pushes it to the right */
+        margin-right: 5px;
+    }
+
+    .search-bar .form-control {
+        display: block !important; /* Force it to stay visible */
+        font-size: 0.8rem; /* Smaller text for small screens */
+        padding: 5px 10px;
+        height: 35px;
+    }
+
+    .search-bar .btn-premium {
+        padding: 0 10px;
+        height: 35px;
+        font-size: 0.7rem;
+    }
+}
+

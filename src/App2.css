@@ -1,0 +1,170 @@
+:root {
+  --primary-bg-color:#252222;
+}
+
+body {
+  font-family: "Plus Jakarta Sans Variable", sans-serif;
+}
+
+
+.search-bar-w input {
+border: none;
+outline: none;
+background-color: transparent;
+}
+
+.search-bar-w {
+  background-color: #C2D4D3;
+}
+
+.search-btn-w {
+  position: absolute;
+  background-color: #7E7C7C;
+  right: 3%;
+}
+
+.search-btn-w:hover {
+  background-color:rgb(107, 107, 107) !important;
+}
+
+.search-btn-w:active {
+  background-color:rgb(31, 30, 30) !important;
+}
+
+.wind {
+  background-color:var(--primary-bg-color);
+  border-radius: 15px;
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.5);
+}
+.wrapper {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2b2f35, #3c424a, #2b2f35);
+}
+.icon-search {
+  color: #7E7C7C;
+}
+ 
+.wrapper-right {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2b2f35, #3c424a, #2b2f35);
+}
+
+.week {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  font-weight: 500;
+}
+.today {
+  color: #7E7C7C;
+  font-weight: 500;
+}
+.days {
+  width: fit-content;
+  border-radius: 10px;
+  background-color:var(--primary-bg-color);
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.5);
+}
+
+.days img {
+  width: 80px;
+}
+.overview {
+background-color: var(--primary-bg-color);
+width: 32%;
+border-radius: 15px;
+box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.5);
+}
+.overview img {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.good {
+color: #009966;
+}
+.moderate {
+  color: #F5CD2F;
+}
+.chart img {
+display: block;
+}
+.chart {
+  background-color: var(--primary-bg-color);
+  width: fit-content;
+  border-radius: 15px;
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.5);
+}
+.sunset-rise {
+  background-color: var(--primary-bg-color);
+  width: 32%;
+  border-radius: 15px;
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gray-scale {
+  color: #7E7C7C;
+}
+.main-bg {
+  background: linear-gradient(135deg,#161b24fd,#24262b);
+  min-height:100vh;
+  font-family: "Plus Jakarta Sans Variable", sans-serif;
+}
+
+@media (max-width:1024px) {
+.temp {
+    font-size: 1rem !important; 
+  }
+  .chart {
+    width: 70%;
+  }
+  .sunset-rise {
+    width: 27%;
+  }
+}
+
+@media (max-width:768px) {
+  .wrapper-right { margin-top: 10%;}
+}
+
+@media (max-width:425px) {
+  .week-days {
+    flex-direction: column;
+  }
+  .days {
+    width: 100%;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    
+  }
+  .days img {
+    width: 100px;
+  }
+  .overview-wrapper {
+    flex-direction: column;
+  }
+  .overview {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .chart-section {
+    flex-direction: column;
+  }
+  .chart {
+    width: 100%;
+  }
+  .sunset-rise {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .sunrise {
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+  }
+  .sunrise i {
+    font-size: 4rem;
+  }
+  .gray-scale .temp {
+    font-size: 4rem;
+  }
+}
