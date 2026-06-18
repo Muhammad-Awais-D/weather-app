@@ -76,7 +76,7 @@ function App2() {
   const getweather = async (query) => {
 
     try {
-      const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=c2b4d650a28147a0b97140029261203&q=${encodeURIComponent(query)}`);
+      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=c2b4d650a28147a0b97140029261203&q=${encodeURIComponent(query)}`);
       const data = await response.json();
       setWeather(data);
     }
