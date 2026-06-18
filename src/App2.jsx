@@ -115,7 +115,7 @@ function App2() {
             <div className='search-bar-w rounded-pill  py-3 px-3 my-4 d-flex align-items-center justify-content-start position-relative'>
               <i className="bi bi-search icon-search"></i>
               <input type='text' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder='Search City' className='ms-3 ' />
-              <button className='btn btn-secondary rounded-pill search-btn-w' onClick={handleSearch} >Click</button>
+              <button className='btn btn-secondary rounded-pill search-btn-w' onClick={handleSearch} >Search</button>
             </div>
             <img src={getWeatherImg(weather.current.condition.code)} alt='cloudy' className='img-fluid' width={300} />
             <div className='display-1 fw-bold text-white'>{weather.current.temp_c}°<sup>c</sup></div>
