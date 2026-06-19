@@ -62,6 +62,7 @@ function App2() {
     return cloudy;
   };
 
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   const getDayFromLocaltime = (localtime) => {
     // Create a Date object from the localtime string
@@ -76,7 +77,7 @@ function App2() {
   const getweather = async (query) => {
 
     try {
-      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=c2b4d650a28147a0b97140029261203&q=${encodeURIComponent(query)}`);
+      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURIComponent(query)}`);
       const data = await response.json();
       setWeather(data);
     }
